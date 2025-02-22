@@ -22,18 +22,19 @@ function App() {
   return (
     <div className="App">
       <div className="login-container">
-        {/* <div className="login-form">
+        <div className="login-form">
           <h2>Enter The Information</h2>
           <form onSubmit={(e) => handleSubmit(e, 'Buyer')}>
             <label>House ID</label>
+            {/* change the type to fit coinbase wallet */}
             <input name="email" required />
             <label>User ID Of The Seller</label>
             <input type="password" name="password" required />
             <button type="submit">Enter</button>
           </form>
-        </div> */}
+        </div>
 
-        <div className="login-form">
+        {/* <div className="login-form">
           <h2>Enter the Information</h2>
           <form onSubmit={(e) => handleSubmit(e, 'Seller')}>
             <label>House ID</label>
@@ -42,7 +43,7 @@ function App() {
             <input type="password" name="password" required />
             <button type="submit">Enter</button>
           </form>
-        </div>
+        </div> */}
       </div>
 
       {welcomeMessage && (
