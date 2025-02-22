@@ -1,21 +1,25 @@
-import './App.css';
-import React, { useState } from 'react';
-import './App.css';
+// Buyer.js
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function App() {
-  const [role, setRole] = useState(null);
-  const [welcomeMessage, setWelcomeMessage] = useState('');
+function Buyer() {
+  const navigate = useNavigate();
 
-  const handleSubmit = (event, userRole) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    if (email && password) {
-      setRole(userRole);
-      setWelcomeMessage(`Welcome, ${userRole}! You are now logged in.`);
-    }
-    else {
-      alert("Login failed, try again")
+    // Grab form values
+    const houseId = event.target.houseId.value;
+    const sellerId = event.target.sellerId.value;
+
+    // Simple example: compare with hard-coded values
+    // Adjust to your real logic as needed
+    const correctHouseId = '123';     
+    const correctSellerId = 'abc';
+
+    if (houseId === correctHouseId && sellerId === correctSellerId) {
+      navigate('/success');
+    } else {
+      alert('Login failed: House ID or User ID for Seller is incorrect.');
     }
   };
 
@@ -23,6 +27,7 @@ function App() {
     <div className="App">
       <div className="login-container">
         <div className="login-form">
+<<<<<<< Updated upstream
           <h2>Enter The Information</h2>
           <form onSubmit={(e) => handleSubmit(e, 'Buyer')}>
             <label>House ID</label>
@@ -37,26 +42,24 @@ function App() {
         </div>
 
         {/* <div className="login-form">
+=======
+>>>>>>> Stashed changes
           <h2>Enter the Information</h2>
-          <form onSubmit={(e) => handleSubmit(e, 'Seller')}>
+          {/* Wrap inputs in a <form> so we can handle onSubmit properly */}
+          <form onSubmit={handleSubmit}>
             <label>House ID</label>
-            <input name="email" required />
+            <input name="houseId" required />
+            
             <label>User ID for Seller</label>
-            <input type="password" name="password" required />
+            <input type="password" name="sellerId" required />
+            
             <button type="submit">Enter</button>
           </form>
-        </div> */}
-      </div>
-
-      {welcomeMessage && (
-        <div className="welcome-message">
-          <p>{welcomeMessage}</p>
         </div>
-      )}
+      </div>
+      
     </div>
   );
 }
 
-export default App;
-
-//branch test
+export default Buyer;
