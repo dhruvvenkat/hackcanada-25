@@ -1,58 +1,49 @@
-//import { useQueryCall, useUpdateCall } from '@ic-reactor/react';
-import './App.css';
-// import motokoLogo from './assets/motoko_moving.png';
-// import motokoShadowLogo from './assets/motoko_shadow.png';
-// import reactLogo from './assets/react.svg';
-// import viteLogo from './assets/vite.svg';
+import React, { useEffect, useState } from 'react';
+import Web3 from 'web3';
+import detectEthereumProvider from '@metamask/detect-provider';
 
-function App() {
-//   const { data: count, refetch } = useQueryCall({
-//     functionName: 'get',
-//   });
+const App = () => {
+  const [account, setAccount] = useState(null);
+  const [contract, setContract] = useState(null);
+  const [status, setStatus] = useState('');
 
-//   const { call: increment, loading } = useUpdateCall({
-//     functionName: 'inc',
-//     onSuccess: refetch,
-//   });
+  useEffect(() => {
+    const loadWeb3 = async () => {
+      const provider = await detectEthereumProvider();
+      if (provider) {
+        const web3 = new Web3(provider);
+        await provider.request({ method: 'eth_requestAccounts' });
+        const accounts = await web3.eth.getAccounts();
+        setAccount(accounts[0]);
+      } else {
+        setStatus('Please install MetaMask!');
+      }
+    };
+
+    loadWeb3();
+  }, []);
+
+  const handleEscrow = async () => {
+    if (contract && account) {
+      // Add your smart contract interaction code here
+      setStatus('Escrow transaction completed!');
+    } else {
+      setStatus('Contract not loaded or account not connected.');
+    }
+  };
 
   return (
-    <div className="App">
-      {/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo vite" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-        <a
-          href="https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/motoko/"
-          target="_blank"
-        >
-          <span className="logo-stack">
-            <img
-              src={motokoShadowLogo}
-              className="logo motoko-shadow"
-              alt="Motoko logo"
-            />
-            <img src={motokoLogo} className="logo motoko" alt="Motoko logo" />
-          </span>
-        </a>
-      </div> */}
-      <h1>Vite + React + Motoko</h1>
-      <div className="card">
-        <button > 
-            {/* onClick={increment} disabled={loading} */}
-          count is {1}
-        </button>
-        <p>
-          Edit <code>backend/Backend.mo</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite, React, and Motoko logos to learn more
-      </p>
+    <div>
+      <h1>Escrow DApp</h1>
+      {account ? (
+        <p>Connected Account: {account}</p>
+      ) : (
+        <p>Connecting to MetaMask...</p>
+      )}
+      <button onClick={handleEscrow}>Initiate Escrow</button>
+      <p>{status}</p>
     </div>
   );
-}
+};
 
 export default App;
