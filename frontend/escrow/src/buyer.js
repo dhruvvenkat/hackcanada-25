@@ -27,23 +27,6 @@ function Buyer() {
     <div className="App">
       <div className="login-container">
         <div className="login-form">
-<<<<<<< Updated upstream
-          <h2>Enter The Information</h2>
-          <form onSubmit={(e) => handleSubmit(e, 'Buyer')}>
-            <label>House ID</label>
-            {/* change the type to fit coinbase wallet */}
-            <input name="email" required />
-            <label>User ID Of The Seller</label>
-            <input type="password" name="password" required />
-            <label>Address of the house</label>
-            <input name="password" required />
-            <button type="submit">Enter</button>
-          </form>
-        </div>
-
-        {/* <div className="login-form">
-=======
->>>>>>> Stashed changes
           <h2>Enter the Information</h2>
           {/* Wrap inputs in a <form> so we can handle onSubmit properly */}
           <form onSubmit={handleSubmit}>

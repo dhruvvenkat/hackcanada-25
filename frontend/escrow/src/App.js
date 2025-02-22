@@ -10,6 +10,7 @@ import Success from './success';
 
 function App() {
   const [walletAddress, setWalletAddress] = useState('');
+  const [selectedRole, setSelectedRole] = useState('');
   const [error, setError] = useState('');
 
   // React Router 提供的钩子，用于在函数里实现编程式导航
@@ -41,11 +42,6 @@ function App() {
       setError('Please connect your wallet first');
       return;
     }
-<<<<<<< Updated upstream
-    
-    // Handle submission logic here
-    console.log('Connected wallet:', walletAddress);
-=======
     // 2. 检查是否选择了角色
     if (!selectedRole) {
       setError('Please select a role');
@@ -61,39 +57,11 @@ function App() {
     } else if (selectedRole === 'buyer') {
       navigate('/buyer');
     }
->>>>>>> Stashed changes
   };
 
   return (
     <div className="App">
       <h1>Real Estate Escrow Service</h1>
-<<<<<<< Updated upstream
-      
-      <div className="login-container">
-        <div className="wallet-card">
-          <h2>Connect Your Wallet</h2>
-          <button 
-            className={`connect-button ${walletAddress ? 'connected' : ''}`}
-            onClick={handleConnectWallet}
-          >
-            {walletAddress ? 
-              `Connected: ${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : 
-              'Connect MetaMask'
-            }
-          </button>
-        </div>
-
-        {error && <div className="error-message">{error}</div>}
-
-        <button 
-          className="submit-button"
-          onClick={handleSubmit}
-          disabled={!walletAddress}
-        >
-          Continue
-        </button>
-      </div>
-=======
 
       {/* 
         这里相当于“主页面”或者“登录页面”，
@@ -151,13 +119,8 @@ function App() {
         <Route path="/seller" element={<Seller />} />
         <Route path="/success" element={<Success />} />
       </Routes>
->>>>>>> Stashed changes
     </div>
   );
 }
 
-<<<<<<< Updated upstream
 export default App;
-=======
-export default App;
->>>>>>> Stashed changes
