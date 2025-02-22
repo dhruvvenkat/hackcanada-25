@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import './App.css';
 
@@ -35,6 +36,7 @@ function App() {
     console.log('Connected wallet:', walletAddress);
   };
 
+function App() {
   return (
     <div className="App">
       <h1>Real Estate Escrow Service</h1>
@@ -64,6 +66,7 @@ function App() {
         </button>
       </div>
     </div>
+
   );
 }
 
@@ -221,3 +224,4 @@ export default App;
 // export default App;
 
 // //branch test
+
