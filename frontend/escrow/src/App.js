@@ -1,165 +1,100 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-  const [walletAddress, setWalletAddress] = useState('');
-  const [selectedRole, setSelectedRole] = useState('');
+  const [formData, setFormData] = useState({
+    address: '',
+    postalCode: ''
+  });
+  const [generatedCode, setGeneratedCode] = useState('');
   const [error, setError] = useState('');
 
-  const handleConnectWallet = async () => {
-    try {
-      if (!window.ethereum) {
-        window.open('https://metamask.io/download/', '_blank');
-        setError('MetaMask not installed - redirecting to download page');
-        return;
-      }
-
-      const accounts = await window.ethereum.request({ 
-        method: 'eth_requestAccounts' 
-      });
-      
-      setWalletAddress(accounts[0]);
-      setError('');
-    } catch (err) {
-      setError('Error connecting to wallet: ' + err.message);
+  // Generate unique code when both fields are filled
+  useEffect(() => {
+    if (formData.address && formData.postalCode) {
+      const parts = [
+        Math.random().toString().slice(2, 4),  // 2 digits
+        Math.random().toString().slice(2, 5),  // 3 digits
+        Math.random().toString().slice(2, 5),  // 3 digits
+        Math.random().toString().slice(2, 4)   // 2 digits
+      ];
+      setGeneratedCode(parts.join(':'));
+    } else {
+      setGeneratedCode('');
     }
+  }, [formData.address, formData.postalCode]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    setError('');
   };
 
-  const handleSubmit = () => {
-    if (!walletAddress) {
-      setError('Please connect your wallet first');
-      return;
-    }
-    if (!selectedRole) {
-      setError('Please select a role');
-      return;
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
     
-    console.log('Connected wallet:', walletAddress);
-    console.log('Selected role:', selectedRole);
+    if (!formData.address || !formData.postalCode) {
+      setError('Please fill in all fields');
+      return;
+    }
+
+    console.log('Form Data:', {
+      ...formData,
+      uniqueCode: generatedCode
+    });
+    alert('Submission successful!\nUnique Code: ' + generatedCode);
   };
 
   return (
     <div className="App">
       <h1>Real Estate Escrow Service</h1>
       
-      <div className="login-container">
-        <div className="button-group">
-          <button 
-            className={`connect-button ${walletAddress ? 'connected' : ''}`}
-            onClick={handleConnectWallet}
-          >
-            {walletAddress ? 
-              `✔ Connected: ${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : 
-              'Connect MetaMask'
-            }
-          </button>
-
-          <div className="dropdown-container">
-            <select
-              value={selectedRole}
-              onChange={(e) => setSelectedRole(e.target.value)}
-              className="role-dropdown"
-            >
-              <option value="">Select Role</option>
-              <option value="seller">Seller</option>
-              <option value="buyer">Buyer</option>
-            </select>
+      <div className="form-container">
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <label htmlFor="address">Address</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              placeholder="Enter your address"
+              required
+            />
           </div>
 
-          <button 
-            className="submit-button"
-            onClick={handleSubmit}
-            disabled={!walletAddress || !selectedRole}
-          >
-            Continue
-          </button>
+          <div className="input-group">
+            <label htmlFor="postalCode">Postal Code</label>
+            <input
+              type="text"
+              id="postalCode"
+              name="postalCode"
+              value={formData.postalCode}
+              onChange={handleChange}
+              placeholder="Enter your postal code"
+              required
+            />
+          </div>
+
+          {generatedCode && (
+            <div className="generated-code">
+              Your Unique Code: <span>{generatedCode}</span>
+            </div>
+          )}
 
           {error && <div className="error-message">{error}</div>}
-        </div>
+
+          <button type="submit" className="submit-button">
+            Submit Address
+          </button>
+        </form>
       </div>
     </div>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useState } from 'react';
-// import './App.css';
-
-// function App() {
-//   const [walletAddress, setWalletAddress] = useState('');
-//   const [error, setError] = useState('');
-
-//   const handleConnectWallet = async () => {
-//     try {
-//       if (!window.ethereum) {
-//         window.open('https://metamask.io/download/', '_blank');
-//         setError('MetaMask not installed - redirecting to download page');
-//         return;
-//       }
-
-//       const accounts = await window.ethereum.request({ 
-//         method: 'eth_requestAccounts' 
-//       });
-      
-//       setWalletAddress(accounts[0]);
-//       setError('');
-//     } catch (err) {
-//       setError('Error connecting to wallet: ' + err.message);
-//     }
-//   };
-
-//   const handleSubmit = () => {
-//     if (!walletAddress) {
-//       setError('Please connect your wallet first');
-//       return;
-//     }
-    
-//     // Handle submission logic here
-//     console.log('Connected wallet:', walletAddress);
-//   };
-
-
-//   return (
-//     <div className="App">
-//       <h1>Real Estate Escrow Service</h1>
-      
-//       <div className="login-container">
-//         <div className="button-group">
-//           <button 
-//             className={`connect-button ${walletAddress ? 'connected' : ''}`}
-//             onClick={handleConnectWallet}
-//           >
-//             {walletAddress ? 
-//               `✔ Connected: ${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : 
-//               'Connect MetaMask'
-//             }
-//           </button>
-//           <button 
-//             className="submit-button"
-//             onClick={handleSubmit}
-//             disabled={!walletAddress}
-//           >
-//             Continue
-//           </button>
-//           {error && <div className="error-message">{error}</div>}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default App;
