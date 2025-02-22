@@ -1,74 +1,375 @@
-#root {
-    max-width: 1280px;
-    margin: 0 auto;
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+    max-width: 800px;
+  }
+  
+  .login-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .welcome-message {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+  }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
     padding: 2rem;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  .login-form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .submit-btn:hover {
+    background-color: #3182ce;
+  }
+  
+  .welcome-message {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #ebf8ff;
+    border-radius: 4px;
+    color: #2c3e50;
+  }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #f5f7fb;
+  }
+  
+  .login-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin-top: 2rem;
+  }
+  
+  .wallet-card {
+    margin-bottom: 2rem;
+  }
+  
+  .connect-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #f6851b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .connect-button:hover {
+    background-color: #e2761b;
+  }
+  
+  .connect-button.connected {
+    background-color: #4CAF50;
+    cursor: default;
+  }
+  
+  .role-selection h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .role-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .role-button {
+    padding: 1.5rem;
+    background-color: #f0f4f8;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .role-button:hover {
+    border-color: #4299e1;
+    background-color: #ebf8ff;
+  }
+  
+  .role-button.selected {
+    border-color: #4299e1;
+    background-color: #4299e1;
+    color: white;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #3182ce;
+  }
+  
+  .submit-button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #e53e3e;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: #fff5f5;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #f5f7fb;
+  }
+  
+  .login-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin-top: 2rem;
     text-align: center;
   }
   
-  .logo {
-    width: 300px;  /* Increase width */
-    height: auto;  /* Maintain aspect ratio */
-    transition: width 0.3s ease-in-out;  /* Smooth transition effect */
-}
+  .wallet-card {
+    margin-bottom: 2rem;
+  }
+  
+  .connect-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #f6851b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    margin: 1rem 0;
+  }
+  
+  .connect-button:hover {
+    background-color: #e2761b;
+  }
+  
+  .connect-button.connected {
+    background-color: #4CAF50;
+    cursor: default;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+  }
+  
+  .submit-button:hover {
+    background-color: #3182ce;
+  }
+  
+  .submit-button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #e53e3e;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: #fff5f5;
+    border-radius: 4px;
+    text-align: center;
+  }
 
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-  }
-  
-  @keyframes logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: white;
   }
   
-  @media (prefers-reduced-motion: no-preference) {
-    .logo.react {
-      animation: logo-spin infinite 60s linear;
-    }
+  .login-container {
+    background: #2d2d2d;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 2rem;
+    text-align: center;
   }
   
-  .logo.motoko:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
   }
   
-  .logo-stack {
-    display: inline-grid;
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
   }
   
-  .logo-stack > * {
-    grid-column: 1;
-    grid-row: 1;
+  .error-message {
+    color: #ff6b6b;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #2d2d2d;
+    border: 1px solid #ff6b6b;
+    border-radius: 8px;
   }
   
-  @keyframes logo-swim {
-    from {
-      transform: rotate(4deg) translateY(0);
-    }
-    50% {
-      transform: rotate(-5deg) translateY(0);
-    }
-    to {
-      transform: rotate(4deg) translateY(0);
-    }
+  .status-message {
+    color: #4CAF50;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
   }
   
-  @media (prefers-reduced-motion: no-preference) {
-    .logo.motoko {
-      animation: logo-swim 5s ease-in-out infinite;
-    }
+  .status-message p {
+    margin: 0;
+    padding: 0.5rem;
   }
-  
-  .card {
-    padding: 2em;
-  }
-  
-  .read-the-docs {
-    color: #888;
-  }
-  
