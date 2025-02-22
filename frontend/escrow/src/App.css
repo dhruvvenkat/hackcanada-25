@@ -373,3 +373,497 @@
     margin: 0;
     padding: 0.5rem;
   }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #f5f7fb;
+  }
+  
+  .login-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 2rem;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .connect-button {
+    padding: 1rem 2rem;
+    background-color: #f6851b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    flex: 1;
+  }
+  
+  .connect-button.connected {
+    background-color: #4CAF50;
+    cursor: default;
+  }
+  
+  .submit-button {
+    padding: 1rem 2rem;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    flex: 1;
+  }
+  
+  .submit-button:disabled {
+    background-color: #2a69bb;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #ff0000;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #fff5f5;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+  }
+
+  /* New stuff here */
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #000000;
+    color: white;
+  }
+  
+  .login-container {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .connect-button {
+    padding: 1rem;
+    background-color: #f6851b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .connect-button.connected {
+    background-color: #4CAF50;
+    cursor: default;
+  }
+  
+  .submit-button {
+    padding: 1rem;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-button:disabled {
+    background-color: #00ff59;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #ff6b6b;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #2d2d2d;
+    border: 1px solid #ff6b6b;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+
+/* More new stuff here */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(180deg, #1a237e 0%, #000000 100%);
+  color: white;
+}
+
+.login-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.connect-button {
+  padding: 1.2rem;
+  background: linear-gradient(145deg, #f6851b, #e2761b);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 5px 15px rgba(246, 133, 27, 0.3);
+}
+
+.connect-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 8px rgba(246, 133, 27, 0.3);
+}
+
+.connect-button.connected {
+  background: linear-gradient(145deg, #4CAF50, #45a049);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+  cursor: default;
+}
+
+.connect-button.connected:active {
+  transform: none;
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.submit-button {
+  padding: 1.2rem;
+  background: linear-gradient(145deg, #2196F3, #1976D2);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+}
+
+.submit-button:disabled {
+  background: linear-gradient(145deg, #4a4a4a, #3a3a3a);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
+}
+
+.error-message {
+  color: #ff6b6b;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(176, 0, 193, 0.748);
+  border: 1px solid #ff6b6b;
+  border-radius: 8px;
+  text-align: center;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Some more new stuff */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(180deg, #000000 0%, #4a148c 100%);
+  color: white;
+}
+
+.login-container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.connect-button {
+  padding: 1.2rem;
+  background: linear-gradient(145deg, #f6851b, #e2761b);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 5px 15px rgba(246, 133, 27, 0.3);
+}
+
+.connect-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 8px rgba(246, 133, 27, 0.3);
+}
+
+.connect-button.connected {
+  background: linear-gradient(145deg, #4CAF50, #45a049);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+  cursor: default;
+}
+
+.connect-button.connected:active {
+  transform: none;
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.submit-button {
+  padding: 1.2rem;
+  background: linear-gradient(145deg, #00bcd4, #0097a7);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 2px 8px rgba(0, 188, 212, 0.3);
+}
+
+.submit-button:disabled {
+  background: linear-gradient(145deg, #767676, #3e3e3e);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff4081;
+  padding: 1rem;
+  background: rgba(255, 64, 129, 0.1);
+  border: 1px solid #ff4081;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: -0.5rem;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Updated CSS with more prominent animations */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(180deg, #000000 0%, #4a148c 100%);
+  color: white;
+}
+
+.login-container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.connect-button {
+  padding: 1.2rem;
+  background: linear-gradient(145deg, #f6851b, #e2761b);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(246, 133, 27, 0.4);
+  position: relative;
+  top: 0;
+}
+
+.connect-button:active {
+  top: 4px;
+  transform: scale(0.98);
+  box-shadow: 0 1px 6px rgba(246, 133, 27, 0.3);
+}
+
+.connect-button.connected {
+  background: linear-gradient(145deg, #4CAF50, #45a049);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+  cursor: default;
+}
+
+.connect-button.connected:active {
+  top: 0;
+  transform: none;
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.submit-button {
+  padding: 1.2rem;
+  background: linear-gradient(145deg, #00bcd4, #0097a7);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+  position: relative;
+  top: 0;
+}
+
+.submit-button:active:not(:disabled) {
+  top: 4px;
+  transform: scale(0.98);
+  box-shadow: 0 1px 6px rgba(0, 188, 212, 0.3);
+}
+
+.submit-button:disabled {
+  background: linear-gradient(145deg, #4a4a4a, #3a3a3a);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff4081;
+  padding: 1rem;
+  background: rgba(255, 64, 129, 0.1);
+  border: 1px solid #ff4081;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: -0.5rem;
+  animation: error-appear 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes error-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Add these styles to your existing CSS */
+.dropdown-container {
+  width: 100%;
+  position: relative;
+}
+
+.role-dropdown {
+  width: 100%;
+  padding: 1.2rem;
+  background: #2d0a5a;
+  border: 2px solid #4a148c;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.1rem;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(74, 20, 140, 0.3);
+}
+
+.role-dropdown:hover {
+  background: #3d1373;
+  border-color: #6a1b9a;
+}
+
+.role-dropdown:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(106, 27, 154, 0.3);
+}
+
+.role-dropdown option {
+  background: #2d0a5a;
+  padding: 1rem;
+}
+
+/* Update the button-group gap */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
