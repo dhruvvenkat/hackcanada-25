@@ -30,6 +30,8 @@ function App() {
             <input name="email" required />
             <label>User ID Of The Seller</label>
             <input type="password" name="password" required />
+            <label>Address of the house</label>
+            <input name="password" required />
             <button type="submit">Enter</button>
           </form>
         </div>
