@@ -1,56 +1,54 @@
-//import { useQueryCall, useUpdateCall } from '@ic-reactor/react';
+
 import './App.css';
-// import motokoLogo from './assets/motoko_moving.png';
-// import motokoShadowLogo from './assets/motoko_shadow.png';
-// import reactLogo from './assets/react.svg';
-// import viteLogo from './assets/vite.svg';
+import React, { useState } from 'react';
+import './App.css';
 
 function App() {
-//   const { data: count, refetch } = useQueryCall({
-//     functionName: 'get',
-//   });
+  const [role, setRole] = useState(null);
+  const [welcomeMessage, setWelcomeMessage] = useState('');
 
-//   const { call: increment, loading } = useUpdateCall({
-//     functionName: 'inc',
-//     onSuccess: refetch,
-//   });
+  const handleSubmit = (event, userRole) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    if (email && password) {
+      setRole(userRole);
+      setWelcomeMessage(`Welcome, ${userRole}! You are now logged in.`);
+    }
+  };
 
   return (
     <div className="App">
-      {/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo vite" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-        <a
-          href="https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/motoko/"
-          target="_blank"
-        >
-          <span className="logo-stack">
-            <img
-              src={motokoShadowLogo}
-              className="logo motoko-shadow"
-              alt="Motoko logo"
-            />
-            <img src={motokoLogo} className="logo motoko" alt="Motoko logo" />
-          </span>
-        </a>
-      </div> */}
-      <h1>Vite + React + Motoko</h1>
-      <div className="card">
-        <button > 
-            {/* onClick={increment} disabled={loading} */}
-          count is {1}
-        </button>
-        <p>
-          Edit <code>backend/Backend.mo</code> and save to test HMR
-        </p>
+      <h1>Real Estate Escrow Service</h1>
+      <div className="login-container">
+        <div className="login-form">
+          <h2>Buyer Login</h2>
+          <form onSubmit={(e) => handleSubmit(e, 'Buyer')}>
+            <label>Email:</label>
+            <input type="email" name="email" required />
+            <label>Password:</label>
+            <input type="password" name="password" required />
+            <button type="submit">Login as Buyer</button>
+          </form>
+        </div>
+
+        <div className="login-form">
+          <h2>Seller Login</h2>
+          <form onSubmit={(e) => handleSubmit(e, 'Seller')}>
+            <label>Email:</label>
+            <input type="email" name="email" required />
+            <label>Password:</label>
+            <input type="password" name="password" required />
+            <button type="submit">Login as Seller</button>
+          </form>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite, React, and Motoko logos to learn more
-      </p>
+
+      {welcomeMessage && (
+        <div className="welcome-message">
+          <p>{welcomeMessage}</p>
+        </div>
+      )}
     </div>
   );
 }
