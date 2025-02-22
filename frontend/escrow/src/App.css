@@ -880,3 +880,104 @@ h1 {
   
   
 }
+
+
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #4a148c 100%);
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  color: white;
+}
+
+.transaction-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  backdrop-filter: blur(10px);
+}
+
+.success-animation {
+  animation: scaleUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.checkmark {
+  font-size: 5rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+  animation: checkmarkScale 0.6s 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #4CAF50;
+}
+
+.transaction-details {
+  margin-top: 2rem;
+  animation: fadeInUp 0.6s 0.6s both;
+}
+
+.detail-item {
+  margin: 1.5rem 0;
+}
+
+.detail-label {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  margin-right: 0.5rem;
+}
+
+.detail-value {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.amount {
+  color: #00bcd4;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes checkmarkScale {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
