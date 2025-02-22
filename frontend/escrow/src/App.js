@@ -1,59 +1,70 @@
-import './App.css';
 import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [role, setRole] = useState(null);
-  const [welcomeMessage, setWelcomeMessage] = useState('');
+  const [walletAddress, setWalletAddress] = useState('');
+  const [error, setError] = useState('');
 
-  const handleSubmit = (event, userRole) => {
-    event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    if (email && password) {
-      setRole(userRole);
-      setWelcomeMessage(`Welcome, ${userRole}! You are now logged in.`);
+  const handleConnectWallet = async () => {
+    try {
+      if (!window.ethereum) {
+        // Open MetaMask download page in new tab
+        window.open('https://metamask.io/download/', '_blank');
+        setError('MetaMask not installed - redirecting to download page');
+        return;
+      }
+
+      const accounts = await window.ethereum.request({ 
+        method: 'eth_requestAccounts' 
+      });
+      
+      setWalletAddress(accounts[0]);
+      setError('');
+    } catch (err) {
+      setError('Error connecting to wallet: ' + err.message);
     }
-    else {
-      alert("Login failed, try again")
+  };
+
+  const handleSubmit = () => {
+    if (!walletAddress) {
+      setError('Please connect your wallet first');
+      return;
     }
+    
+    // Handle submission logic here
+    console.log('Connected wallet:', walletAddress);
   };
 
   return (
     <div className="App">
+      <h1>Real Estate Escrow Service</h1>
+      
       <div className="login-container">
-        {/* <div className="login-form">
-          <h2>Enter The Information</h2>
-          <form onSubmit={(e) => handleSubmit(e, 'Buyer')}>
-            <label>House ID</label>
-            <input name="email" required />
-            <label>User ID Of The Seller</label>
-            <input type="password" name="password" required />
-            <button type="submit">Enter</button>
-          </form>
-        </div> */}
-
-        <div className="login-form">
-          <h2>Enter the Information</h2>
-          <form onSubmit={(e) => handleSubmit(e, 'Seller')}>
-            <label>House ID</label>
-            <input name="email" required />
-            <label>User ID for Seller</label>
-            <input type="password" name="password" required />
-            <button type="submit">Enter</button>
-          </form>
+        <div className="wallet-card">
+          <h2>Connect Your Wallet</h2>
+          <button 
+            className={`connect-button ${walletAddress ? 'connected' : ''}`}
+            onClick={handleConnectWallet}
+          >
+            {walletAddress ? 
+              `Connected: ${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : 
+              'Connect MetaMask'
+            }
+          </button>
         </div>
+
+        {error && <div className="error-message">{error}</div>}
+
+        <button 
+          className="submit-button"
+          onClick={handleSubmit}
+          disabled={!walletAddress}
+        >
+          Continue
+        </button>
       </div>
-
-      {welcomeMessage && (
-        <div className="welcome-message">
-          <p>{welcomeMessage}</p>
-        </div>
-      )}
     </div>
   );
 }
 
 export default App;
-
-//branch test
