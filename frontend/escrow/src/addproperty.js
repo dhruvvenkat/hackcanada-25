@@ -50,7 +50,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Real Estate Escrow Service</h1>
+      <h1>Get Your Own Unique Property Code</h1>
       
       <div className="form-container">
         <form onSubmit={handleSubmit}>
