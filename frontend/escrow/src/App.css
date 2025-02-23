@@ -280,7 +280,8 @@
   h2 {
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: #ffffff;
+    color: #6041d0;
+    text-align: center;
   }
   
   .error-message {
@@ -406,14 +407,14 @@
   }
 
 /* More new stuff here */
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
   background: linear-gradient(180deg, #1a237e 0%, #000000 100%);
   color: white;
-}
+} */
 
 
 
@@ -673,6 +674,7 @@ h1 {
 
 .App {
   display: flex;
+  justify-items: center;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -953,12 +955,13 @@ h1 {
 }
 
 .glass-card {
+  justify-content: center;
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   border-radius: 1.5rem;
   padding: 2.5rem;
   width: 100%;
-  max-width: 500px;
+  /* max-width: 500px; */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transform-style: preserve-3d;
@@ -1144,7 +1147,7 @@ h1 {
 }
 
 .seller-header h2 {
-  color: #1a1a1a;
+  color: #a744f8;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
 }
@@ -1168,7 +1171,7 @@ h1 {
 
 .form-group label {
   font-weight: 500;
-  color: #333;
+  color: #f9f8f8;
   font-size: 0.9rem;
 }
 
@@ -1265,4 +1268,9 @@ h1 {
 .nav-button:active {
   transform: translateY(0);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.seller-border {
+  border: 2px solid #007bff; /* Add this line for the border */
+  border-radius: 12px; /* Optional: Add border-radius for rounded corners */
 }

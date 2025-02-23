@@ -40,7 +40,7 @@ function Add() {
   };
 
   return (
-    <div className="app-container">
+    <div>
       <div className="glass-card">
         <h1 className="title">Property Registration</h1>
         
