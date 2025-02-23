@@ -26,7 +26,6 @@ function Seller() {
   };
   return (
     <div className="App">
-      <div className="login-container">
         <div className="login-form">
           <h2>Enter the Information</h2>
           <form onSubmit={handleSubmit}>
@@ -39,7 +38,7 @@ function Seller() {
             <button type="submit">Enter</button>
           </form>
         </div>
-      </div>
+  
 
           <p>Welcome, Seller</p>
 
