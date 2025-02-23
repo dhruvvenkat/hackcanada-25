@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-function App() {
+function Add() {
   const [formData, setFormData] = useState({
     address: '',
     postalCode: ''
@@ -97,4 +97,4 @@ function App() {
   );
 }
 
-export default App;
+export default Add;

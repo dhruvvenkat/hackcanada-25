@@ -1,19 +1,18 @@
-// App.js
 import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 
-// 引入 Buyer、Seller 两个页面组件
 import Buyer from './buyer';
 import Seller from './seller';
 import Success from './success';
+import Sellerpre from "./sellerpre"
+import Add from './addproperties';
 
 function App() {
   const [walletAddress, setWalletAddress] = useState('');
   const [selectedRole, setSelectedRole] = useState('');
   const [error, setError] = useState('');
 
-  // React Router 提供的钩子，用于在函数里实现编程式导航
   const navigate = useNavigate();
 
   const handleConnectWallet = async () => {
@@ -37,12 +36,11 @@ function App() {
   };
 
   const handleSubmit = () => {
-    // 1. 检查是否连接了钱包
+
     if (!walletAddress) {
       setError('Please connect your wallet first');
       return;
     }
-    // 2. 检查是否选择了角色
     if (!selectedRole) {
       setError('Please select a role');
       return;
@@ -51,9 +49,8 @@ function App() {
     console.log('Connected wallet:', walletAddress);
     console.log('Selected role:', selectedRole);
 
-    // 3. 根据角色跳转到对应页面
     if (selectedRole === 'seller') {
-      navigate('/seller');
+      navigate('/sellerPre');
     } else if (selectedRole === 'buyer') {
       navigate('/buyer');
     }
@@ -63,10 +60,7 @@ function App() {
     <div className="App">
       <h1>Real Estate Escrow Service</h1>
 
-      {/* 
-        这里相当于“主页面”或者“登录页面”，
-        只有在 path="/" 时才会显示 
-      */}
+      
       <Routes>
         <Route
           path="/"
@@ -109,15 +103,12 @@ function App() {
             </div>
           }
         />
-        {/* 
-          当路径是 "/buyer" 时，渲染 Buyer 组件 
-        */}
+        
         <Route path="/buyer" element={<Buyer />} />
-        {/* 
-          当路径是 "/seller" 时，渲染 Seller 组件 
-        */}
+        <Route path= "/sellerpre" element = {<Sellerpre />} />
         <Route path="/seller" element={<Seller />} />
         <Route path="/success" element={<Success />} />
+        <Route path="/addproperties" element={<Add />} />
       </Routes>
     </div>
   );

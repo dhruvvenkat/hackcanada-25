@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
   const [transactionTime] = useState(new Date());
   const [amount] = useState(
     Math.floor(Math.random() * (1000000 - 100000 + 1)) + 100000
   );
+  const navigate = useNavigate();
 
   return (
     <div className="App">
@@ -31,6 +33,12 @@ function App() {
           </div>
         </div>
       </div>
+      <button 
+        className='return-b'
+          onClick={() => navigate('/')}
+        >
+          Return to Home
+        </button>
     </div>
   );
 }
