@@ -20,11 +20,11 @@ function Seller() {
   };
 
   return (
-    <div className="seller-container">
-      <div className="seller-card">
+    <div>
+      <div className = "glass-card">
         <header className="seller-header">
           <h2>Welcome, Seller</h2>
-          <p>Please enter your property information</p>
+          <h3>Please enter your property information</h3>
         </header>
 
         <form className="seller-form" onSubmit={handleSubmit}>
