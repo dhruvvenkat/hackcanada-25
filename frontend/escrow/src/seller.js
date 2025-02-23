@@ -4,45 +4,70 @@ import { useNavigate } from 'react-router-dom';
 
 function Seller() {
   const navigate = useNavigate();
+  const [error, setError] = React.useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Grab form values
-    const houseId = event.target.houseId.value;
-    const sellerId = event.target.sellerId.value;
-    const houseAdd = event.target.houseAdd.value;
+    const formData = new FormData(event.target);
+    const { houseId, sellerId, houseAdd } = Object.fromEntries(formData);
 
-    // Simple example: compare with hard-coded values
-    // Adjust to your real logic as needed
-    const correctHouseId = '123';     
-    const correctSellerId = 'abc';
-    const correctHouseAdd = "3k"
-
-    if (houseId === correctHouseId && sellerId === correctSellerId && houseAdd === correctHouseAdd) {
+    // Validation logic (replace with actual API call)
+    if (houseId === '123' && sellerId === 'abc' && houseAdd === '3k') {
       navigate('/success');
     } else {
-      alert('Login failed: House ID or User ID for Seller is incorrect.');
+      setError('Verification failed: Please check your information and try again.');
     }
   };
+
   return (
-    <div className="App">
-      <div className="login-container">
-        <div className="login-form">
-          <h2>Enter the Information</h2>
-          <form onSubmit={handleSubmit}>
-            <label>House ID</label>
-            <input name="houseId" required />
-            <label>User ID for Seller</label>
-            <input name="sellerId" required />
-            <label>House Address</label>
-            <input name="houseAdd" required />
-            <button type="submit">Enter</button>
-          </form>
-        </div>
+    <div className="seller-container">
+      <div className="seller-card">
+        <header className="seller-header">
+          <h2>Welcome, Seller</h2>
+          <p>Please enter your property information</p>
+        </header>
+
+        <form className="seller-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="houseId">House ID</label>
+            <input 
+              id="houseId"
+              name="houseId" 
+              type="text" 
+              required 
+              placeholder="Enter house ID"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="sellerId">Seller ID</label>
+            <input
+              id="sellerId"
+              name="sellerId"
+              type="text"
+              required
+              placeholder="Enter seller ID"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="houseAdd">House Address</label>
+            <input
+              id="houseAdd"
+              name="houseAdd"
+              type="text"
+              required
+              placeholder="Enter full address"
+            />
+          </div>
+
+          {error && <div className="error-message">{error}</div>}
+
+          <button type="submit" className="submit-button">
+            Verify Information
+          </button>
+        </form>
       </div>
-
-          <p>Welcome, Seller</p>
-
     </div>
   );
 }
