@@ -12,28 +12,44 @@
     text-align: center;
     margin: 20px 0;
   }
-  
-  .login-container1 {
+
+  .login-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 16px;
+    width: 20rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    max-width: 50%;
+    margin-top: 1rem;
+    text-align: center;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
-    justify-content: space-around;
-    max-width: 800px;
+    justify-content: center;
     align-items: center;
   }
 
-  .login-container {
-    display: flex;
-    justify-content: space-around;
-    max-width: 800px;
-    align-items: center;
+  .login-form h2{
+    text-align: center;
   }
   
   .login-form {
+    text-align: left;
+    justify-content: center;
     background: white;
-    padding: 20px;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 45%;
     margin-top: -20rem;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    
+  }
+
+  .login-form h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
   }
   
   label {
@@ -43,7 +59,7 @@
   }
   
   input {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
@@ -72,35 +88,14 @@
     text-align: center;
   }
 
-  .App {
+  /* .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     padding: 2rem;
-  }
+  } */
   
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 2rem;
-  }
-  
-  .login-form {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .login-form h2 {
-    margin-bottom: 1.5rem;
-    color: #2c3e50;
-  }
   
   .form-group {
     margin-bottom: 1rem;
@@ -145,50 +140,20 @@
     color: #2c3e50;
   }
 
-  .App {
+  /* .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     padding: 2rem;
     background-color: #f5f7fb;
-  }
-  
-  .login-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
-    margin-top: 2rem;
-  }
-  
+  } */
+   
   .wallet-card {
     margin-bottom: 2rem;
   }
   
-  .connect-button {
-    width: 100%;
-    padding: 1rem;
-    background-color: #f6851b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.2s ease;
-  }
-  
-  .connect-button:hover {
-    background-color: #e2761b;
-  }
-  
-  .connect-button.connected {
-    background-color: #4CAF50;
-    cursor: default;
-  }
-  
+
   .role-selection h2 {
     margin-bottom: 1.5rem;
     color: #2c3e50;
@@ -252,52 +217,19 @@
     text-align: center;
   }
 
-  .App {
+  /* .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     padding: 2rem;
     background-color: #f5f7fb;
-  }
-  
-  .login-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
-    margin-top: 2rem;
-    text-align: center;
-  }
+  } */
   
   .wallet-card {
     margin-bottom: 2rem;
   }
-  
-  .connect-button {
-    width: 100%;
-    padding: 1rem;
-    background-color: #f6851b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.2s ease;
-    margin: 1rem 0;
-  }
-  
-  .connect-button:hover {
-    background-color: #e2761b;
-  }
-  
-  .connect-button.connected {
-    background-color: #4CAF50;
-    cursor: default;
-  }
-  
+    
   .submit-button {
     width: 100%;
     padding: 1rem;
@@ -329,7 +261,7 @@
     text-align: center;
   }
 
-  .App {
+  /* .App {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -337,18 +269,7 @@
     padding: 2rem;
     background-color: #1a1a1a;
     color: white;
-  }
-  
-  .login-container {
-    background: #2d2d2d;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 500px;
-    margin-top: 2rem;
-    text-align: center;
-  }
+  } */
   
   h1 {
     font-size: 2.5rem;
@@ -382,46 +303,20 @@
     padding: 0.5rem;
   }
 
-  .App {
+  /* .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     padding: 2rem;
     background-color: #f5f7fb;
-  }
+  } */
   
-  .login-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin-top: 2rem;
-  }
   
   .button-group {
     display: flex;
     gap: 1rem;
     justify-content: center;
-  }
-  
-  .connect-button {
-    padding: 1rem 2rem;
-    background-color: #f6851b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    flex: 1;
-  }
-  
-  .connect-button.connected {
-    background-color: #4CAF50;
-    cursor: default;
   }
   
   .submit-button {
@@ -452,12 +347,11 @@
   
   h1 {
     color: #2c3e50;
-    margin-bottom: 2rem;
   }
 
   /* New stuff here */
 
-  .App {
+  /* .App {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -465,17 +359,8 @@
     padding: 2rem;
     background-color: #000000;
     color: white;
-  }
+  } */
   
-  .login-container {
-    background: #1a1a1a;
-    padding: 2rem;
-    border-radius: 16px;
-    width: 100%;
-    max-width: 400px;
-    margin-top: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  }
   
   .button-group {
     display: flex;
@@ -483,21 +368,6 @@
     gap: 1rem;
   }
   
-  .connect-button {
-    padding: 1rem;
-    background-color: #f6851b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-  }
-  
-  .connect-button.connected {
-    background-color: #4CAF50;
-    cursor: default;
-  }
   
   .submit-button {
     padding: 1rem;
@@ -527,11 +397,10 @@
   
   h1 {
     color: #ffffff;
-    margin-bottom: 2rem;
   }
 
 /* More new stuff here */
-.App {
+/* .App {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -539,18 +408,9 @@
   padding: 2rem;
   background: linear-gradient(180deg, #1a237e 0%, #000000 100%);
   color: white;
-}
+} */
 
-.login-container {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 2rem;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 400px;
-  margin-top: 2rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-}
+
 
 .button-group {
   display: flex;
@@ -559,7 +419,6 @@
 }
 
 .connect-button {
-  padding: 1.2rem;
   background: linear-gradient(145deg, #f6851b, #e2761b);
   color: white;
   border: none;
@@ -568,23 +427,15 @@
   font-size: 1.1rem;
   transition: all 0.2s ease;
   box-shadow: 0 5px 15px rgba(246, 133, 27, 0.3);
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #f6851b;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  
 }
 
-.connect-button:active {
-  transform: translateY(3px);
-  box-shadow: 0 2px 8px rgba(246, 133, 27, 0.3);
-}
-
-.connect-button.connected {
-  background: linear-gradient(145deg, #4CAF50, #45a049);
-  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
-  cursor: default;
-}
-
-.connect-button.connected:active {
-  transform: none;
-  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
-}
 
 .submit-button {
   padding: 1.2rem;
@@ -621,12 +472,11 @@
 
 h1 {
   color: #ffffff;
-  margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Some more new stuff */
-.App {
+/* .App {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -634,18 +484,8 @@ h1 {
   padding: 2rem;
   background: linear-gradient(180deg, #000000 0%, #4a148c 100%);
   color: white;
-}
+} */
 
-.login-container {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 400px;
-  margin-top: 2rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-}
 
 .button-group {
   display: flex;
@@ -653,32 +493,13 @@ h1 {
   gap: 1.5rem;
 }
 
-.connect-button {
-  padding: 1.2rem;
-  background: linear-gradient(145deg, #f6851b, #e2761b);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: all 0.2s ease;
-  box-shadow: 0 5px 15px rgba(246, 133, 27, 0.3);
-}
-
-.connect-button:active {
-  transform: translateY(3px);
-  box-shadow: 0 2px 8px rgba(246, 133, 27, 0.3);
-}
-
 .connect-button.connected {
   background: linear-gradient(145deg, #4CAF50, #45a049);
   box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
   cursor: default;
-}
-
-.connect-button.connected:active {
-  transform: none;
-  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+  background: var(--success-green);
+  cursor: default;
+  /* padding-right: 3rem; */
 }
 
 .submit-button {
@@ -714,14 +535,8 @@ h1 {
   margin-top: -0.5rem;
 }
 
-h1 {
-  color: #ffffff;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
 /* Updated CSS with more prominent animations */
-.App {
+/* .App {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -729,18 +544,7 @@ h1 {
   padding: 2rem;
   background: linear-gradient(180deg, #000000 0%, #4a148c 100%);
   color: white;
-}
-
-.login-container {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 400px;
-  margin-top: 2rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-}
+} */
 
 .button-group {
   display: flex;
@@ -748,37 +552,6 @@ h1 {
   gap: 1.5rem;
 }
 
-.connect-button {
-  padding: 1.2rem;
-  background: linear-gradient(145deg, #f6851b, #e2761b);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 6px 20px rgba(246, 133, 27, 0.4);
-  position: relative;
-  top: 0;
-}
-
-.connect-button:active {
-  top: 4px;
-  transform: scale(0.98);
-  box-shadow: 0 1px 6px rgba(246, 133, 27, 0.3);
-}
-
-.connect-button.connected {
-  background: linear-gradient(145deg, #4CAF50, #45a049);
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-  cursor: default;
-}
-
-.connect-button.connected:active {
-  top: 0;
-  transform: none;
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-}
 
 .submit-button {
   padding: 1.2rem;
@@ -943,7 +716,7 @@ h1 {
 .detail-label {
   font-size: 1.2rem;
   color: #a0a0a0;
-  margin-right: 0.5rem;
+  /* margin-right: 0.5rem; */
 }
 
 .detail-value {
@@ -1003,7 +776,7 @@ h1 {
 }
 
 .App {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background: var(--background-dark);
   color: var(--text-light);
   font-family: 'Inter', 'Calibri', sans-serif;
@@ -1022,35 +795,10 @@ h1 {
   text-align: center;
 }
 
-.login-container {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border-radius: 1.5rem;
-  padding: 2.5rem;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .button-group {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-.connect-button {
-  padding: 1.2rem;
-  background: var(--primary-gradient);
-  color: white;
-  border: none;
-  border-radius: 0.75rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
 }
 
 .connect-button:not(.connected):hover {
@@ -1058,19 +806,6 @@ h1 {
   box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
 }
 
-.connect-button.connected {
-  background: var(--success-green);
-  cursor: default;
-  padding-right: 3rem;
-}
-
-.connect-button.connected::after {
-  content: "✔";
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 .role-dropdown {
   width: 100%;
@@ -1083,7 +818,7 @@ h1 {
   appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right 1rem center;
+  /* background-position: right 1rem center; */
   background-size: 1.2em;
   transition: all 0.3s ease;
 }
