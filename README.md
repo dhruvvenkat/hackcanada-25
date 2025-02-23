@@ -29,6 +29,11 @@ If any of these conditions are not met, the transaction is cancelled and the fun
 - **Ecosystems:** MetaMask
 - **Version Management:** Git/GitHub (this page!)
 
+## 🏫 What We Learned
+ - A deeper understanding of how the blockchain/smart contracts work
+ - How the ICP platform works and the global reach that it has (canisters, reverse gas fees, DFX, Motoko)
+ - Better understanding of how to integrate React into HTML/CSS projects
+
 ## Future Improvements
  - Add a feature to transfer the title deed to a property in exchange for monetary payment (eliminating title companies)
  - Add a portal for real estate lawyers to upload written contracts and utilizing OCR to generate a Motoko smart contract based on the natural language in the contract
