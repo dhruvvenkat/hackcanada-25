@@ -12,20 +12,44 @@
     text-align: center;
     margin: 20px 0;
   }
-  
+
   .login-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 16px;
+    width: 20rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    max-width: 50%;
+    margin-top: 1rem;
+    text-align: center;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
-    justify-content: space-around;
-    margin: 40px auto;
-    max-width: 800px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-form h2{
+    text-align: center;
   }
   
   .login-form {
+    text-align: left;
+    justify-content: center;
     background: white;
-    padding: 20px;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 45%;
+    margin-top: -20rem;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    
+  }
+
+  .login-form h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
   }
   
   label {
@@ -35,7 +59,7 @@
   }
   
   input {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
@@ -64,35 +88,14 @@
     text-align: center;
   }
 
-  .App {
+  /* .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     padding: 2rem;
-  }
+  } */
   
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 2rem;
-  }
-  
-  .login-form {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .login-form h2 {
-    margin-bottom: 1.5rem;
-    color: #2c3e50;
-  }
   
   .form-group {
     margin-bottom: 1rem;
@@ -137,50 +140,20 @@
     color: #2c3e50;
   }
 
-  .App {
+  /* .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     padding: 2rem;
     background-color: #f5f7fb;
-  }
-  
-  .login-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
-    margin-top: 2rem;
-  }
-  
+  } */
+   
   .wallet-card {
     margin-bottom: 2rem;
   }
   
-  .connect-button {
-    width: 100%;
-    padding: 1rem;
-    background-color: #f6851b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.2s ease;
-  }
-  
-  .connect-button:hover {
-    background-color: #e2761b;
-  }
-  
-  .connect-button.connected {
-    background-color: #4CAF50;
-    cursor: default;
-  }
-  
+
   .role-selection h2 {
     margin-bottom: 1.5rem;
     color: #2c3e50;
@@ -244,52 +217,19 @@
     text-align: center;
   }
 
-  .App {
+  /* .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     padding: 2rem;
     background-color: #f5f7fb;
-  }
-  
-  .login-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
-    margin-top: 2rem;
-    text-align: center;
-  }
+  } */
   
   .wallet-card {
     margin-bottom: 2rem;
   }
-  
-  .connect-button {
-    width: 100%;
-    padding: 1rem;
-    background-color: #f6851b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.2s ease;
-    margin: 1rem 0;
-  }
-  
-  .connect-button:hover {
-    background-color: #e2761b;
-  }
-  
-  .connect-button.connected {
-    background-color: #4CAF50;
-    cursor: default;
-  }
-  
+    
   .submit-button {
     width: 100%;
     padding: 1rem;
@@ -321,7 +261,7 @@
     text-align: center;
   }
 
-  .App {
+  /* .App {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -329,18 +269,7 @@
     padding: 2rem;
     background-color: #1a1a1a;
     color: white;
-  }
-  
-  .login-container {
-    background: #2d2d2d;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 500px;
-    margin-top: 2rem;
-    text-align: center;
-  }
+  } */
   
   h1 {
     font-size: 2.5rem;
@@ -374,46 +303,21 @@
     padding: 0.5rem;
   }
 
-  .App {
+
+  /* .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     padding: 2rem;
     background-color: #f5f7fb;
-  }
+  } */
   
-  .login-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin-top: 2rem;
-  }
   
   .button-group {
     display: flex;
     gap: 1rem;
     justify-content: center;
-  }
-  
-  .connect-button {
-    padding: 1rem 2rem;
-    background-color: #f6851b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    flex: 1;
-  }
-  
-  .connect-button.connected {
-    background-color: #4CAF50;
-    cursor: default;
   }
   
   .submit-button {
@@ -444,12 +348,11 @@
   
   h1 {
     color: #2c3e50;
-    margin-bottom: 2rem;
   }
 
   /* New stuff here */
 
-  .App {
+  /* .App {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -457,17 +360,7 @@
     padding: 2rem;
     background-color: #000000;
     color: white;
-  }
-  
-  .login-container {
-    background: #1a1a1a;
-    padding: 2rem;
-    border-radius: 16px;
-    width: 100%;
-    max-width: 400px;
-    margin-top: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  }
+  } */
   
   .button-group {
     display: flex;
@@ -475,21 +368,6 @@
     gap: 1rem;
   }
   
-  .connect-button {
-    padding: 1rem;
-    background-color: #f6851b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-  }
-  
-  .connect-button.connected {
-    background-color: #4CAF50;
-    cursor: default;
-  }
   
   .submit-button {
     padding: 1rem;
@@ -519,11 +397,15 @@
   
   h1 {
     color: #ffffff;
+  }
+
+/* More new stuff here */
+/* .App {
+=======
     margin-bottom: 2rem;
   }
 
 /* More new stuff here */
-.App {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -533,16 +415,7 @@
   color: white;
 }
 
-.login-container {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 2rem;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 400px;
-  margin-top: 2rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-}
+
 
 .button-group {
   display: flex;
@@ -551,7 +424,6 @@
 }
 
 .connect-button {
-  padding: 1.2rem;
   background: linear-gradient(145deg, #f6851b, #e2761b);
   color: white;
   border: none;
@@ -560,23 +432,15 @@
   font-size: 1.1rem;
   transition: all 0.2s ease;
   box-shadow: 0 5px 15px rgba(246, 133, 27, 0.3);
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #f6851b;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  
 }
 
-.connect-button:active {
-  transform: translateY(3px);
-  box-shadow: 0 2px 8px rgba(246, 133, 27, 0.3);
-}
-
-.connect-button.connected {
-  background: linear-gradient(145deg, #4CAF50, #45a049);
-  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
-  cursor: default;
-}
-
-.connect-button.connected:active {
-  transform: none;
-  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
-}
 
 .submit-button {
   padding: 1.2rem;
@@ -613,12 +477,12 @@
 
 h1 {
   color: #ffffff;
-  margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Some more new stuff */
-.App {
+
+/* .App {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -626,18 +490,8 @@ h1 {
   padding: 2rem;
   background: linear-gradient(180deg, #000000 0%, #4a148c 100%);
   color: white;
-}
+} */
 
-.login-container {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 400px;
-  margin-top: 2rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-}
 
 .button-group {
   display: flex;
@@ -645,32 +499,13 @@ h1 {
   gap: 1.5rem;
 }
 
-.connect-button {
-  padding: 1.2rem;
-  background: linear-gradient(145deg, #f6851b, #e2761b);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: all 0.2s ease;
-  box-shadow: 0 5px 15px rgba(246, 133, 27, 0.3);
-}
-
-.connect-button:active {
-  transform: translateY(3px);
-  box-shadow: 0 2px 8px rgba(246, 133, 27, 0.3);
-}
-
 .connect-button.connected {
   background: linear-gradient(145deg, #4CAF50, #45a049);
   box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
   cursor: default;
-}
-
-.connect-button.connected:active {
-  transform: none;
-  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+  background: var(--success-green);
+  cursor: default;
+  /* padding-right: 3rem; */
 }
 
 .submit-button {
@@ -706,14 +541,9 @@ h1 {
   margin-top: -0.5rem;
 }
 
-h1 {
-  color: #ffffff;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
 
 /* Updated CSS with more prominent animations */
-.App {
+/* .App {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -721,55 +551,13 @@ h1 {
   padding: 2rem;
   background: linear-gradient(180deg, #000000 0%, #4a148c 100%);
   color: white;
-}
+} */
 
-.login-container {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 400px;
-  margin-top: 2rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-}
 
 .button-group {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-.connect-button {
-  padding: 1.2rem;
-  background: linear-gradient(145deg, #f6851b, #e2761b);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 6px 20px rgba(246, 133, 27, 0.4);
-  position: relative;
-  top: 0;
-}
-
-.connect-button:active {
-  top: 4px;
-  transform: scale(0.98);
-  box-shadow: 0 1px 6px rgba(246, 133, 27, 0.3);
-}
-
-.connect-button.connected {
-  background: linear-gradient(145deg, #4CAF50, #45a049);
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-  cursor: default;
-}
-
-.connect-button.connected:active {
-  top: 0;
-  transform: none;
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
 }
 
 .submit-button {
@@ -866,4 +654,615 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+/* This one deals with the success page
+/* Success.css */
+.success-container {
+  display: flexbox;
+  justify-items: center;
+  background-color: rgba(223, 196, 155, 0.868);
+  justify-content: center;
+  margin-top: 10rem;
+  align-items: center;
+  
+  
+}
+
+
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #8020f6 100%);
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  color: white;
+}
+
+.transaction-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  backdrop-filter: blur(10px);
+  margin-top: -20rem;
+}
+
+.success-animation {
+  animation: scaleUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.checkmark {
+  font-size: 5rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+  animation: checkmarkScale 0.6s 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #4CAF50;
+}
+
+.transaction-details {
+  margin-top: 2rem;
+  animation: fadeInUp 0.6s 0.6s both;
+}
+
+.detail-item {
+  margin: 1.5rem 0;
+}
+
+.detail-label {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  /* margin-right: 0.5rem; */
+}
+
+.detail-value {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.amount {
+  color: #00bcd4;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes checkmarkScale {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* App.css */
+:root {
+  --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  --secondary-color: #3b82f6;
+  --background-dark: #0f172a;
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --text-light: #f8fafc;
+  --success-green: #10b981;
+  --error-red: #ef4444;
+}
+
+.App {
+  /* min-height: 100vh; */
+  background: var(--background-dark);
+  color: var(--text-light);
+  font-family: 'Inter', 'Calibri', sans-serif;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.connect-button:not(.connected):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+
+.role-dropdown {
+  width: 100%;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  color: var(--text-light);
+  font-size: 1rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  /* background-position: right 1rem center; */
+  background-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.role-dropdown:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.role-dropdown:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}
+
+.submit-button {
+  padding: 1.2rem;
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-button:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: var(--error-red);
+  padding: 1rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error-red);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  animation: error-appear 0.4s ease-out;
+}
+
+@keyframes error-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add glassmorphism effect to all pages */
+.page-container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Add to App.css */
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.submit-button {
+  padding: 12px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.return-b{
+  background-color: #2133f3;
+  width: fit-content;
+  margin-bottom: 2cm;
+
+}
+
+.form-container{
+  margin-top: -20rem;
+  border: #0097a7;
+  border-width: 0.1ch;
+}
+
+/* (IMPORTANT) Add Properties screen */
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  --background-dark: #0f172a;
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --text-light: #f8fafc;
+  --accent-cyan: #06b6d4;
+  --error-red: #ef4444;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-dark);
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform-style: preserve-3d;
+}
+
+.title {
+  color: var(--text-light);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-label {
+  display: block;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.modern-input {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  color: var(--text-light);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.modern-input:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+}
+
+.modern-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.code-display {
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid var(--accent-cyan);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.code-label {
+  display: block;
+  color: var(--accent-cyan);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.code-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-light);
+}
+
+.submit-btn {
+  position: relative;
+  width: 100%;
+  padding: 1.2rem;
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--transition);
+  margin-top: 1.5rem;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.hover-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.submit-btn:hover .hover-effect {
+  left: 100%;
+}
+
+.error-message {
+  color: var(--error-red);
+  padding: 1rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error-red);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-shake {
+  animation: shake 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(8px) }
+  50% { transform: translateX(-8px) }
+  75% { transform: translateX(8px) }
+  100% { transform: translateX(0) }
+}
+
+/* (IMPORTANT) Seller.js  */
+
+.seller-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding: 2rem;
+}
+
+.seller-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 450px;
+}
+
+.seller-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.seller-header h2 {
+  color: #1a1a1a;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.seller-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.seller-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+
+/* Previous styles remain the same */
+
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Add this for the "Go to Seller Page" button (wherever it exists in your app) */
+.nav-button {
+  background-color: #28a745;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-button:hover {
+  background-color: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }

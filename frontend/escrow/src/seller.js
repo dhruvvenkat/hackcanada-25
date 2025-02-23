@@ -1,48 +1,75 @@
 import './App.css';
-import React, { useState } from 'react';
-import './App.css';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function App() {
-  const [role, setRole] = useState(null);
-  const [welcomeMessage, setWelcomeMessage] = useState('');
+function Seller() {
+  const navigate = useNavigate();
+  const [error, setError] = React.useState('');
 
-  const handleSubmit = (event, userRole) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    if (email && password) {
-      setRole(userRole);
-      setWelcomeMessage(`Welcome, ${userRole}! You are now logged in.`);
-    }
-    else {
-      alert("Login failed, try again")
+    const formData = new FormData(event.target);
+    const { houseId, sellerId, houseAdd } = Object.fromEntries(formData);
+
+    // Validation logic (replace with actual API call)
+    if (houseId === '123' && sellerId === 'abc' && houseAdd === '3k') {
+      navigate('/success');
+    } else {
+      setError('Verification failed: Please check your information and try again.');
     }
   };
 
   return (
-    <div className="App">
-      <div className="login-container">
-        <div className="login-form">
-          <h2>Enter the Information</h2>
-          <form onSubmit={(e) => handleSubmit(e, 'Seller')}>
-            <label>House ID</label>
-            <input name="email" required />
-            <label>User ID for Seller</label>
-            <input type="password" name="password" required />
-            <button type="submit">Enter</button>
-          </form>
-        </div>
-      </div>
+    <div className="seller-container">
+      <div className="seller-card">
+        <header className="seller-header">
+          <h2>Welcome, Seller</h2>
+          <p>Please enter your property information</p>
+        </header>
 
-      {welcomeMessage && (
-        <div className="welcome-message">
-          <p>{welcomeMessage}</p>
-        </div>
-      )}
+        <form className="seller-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="houseId">Property ID</label>
+            <input 
+              id="houseId"
+              name="houseId" 
+              type="text" 
+              required 
+              placeholder="Enter house ID"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="sellerId">Seller ID</label>
+            <input
+              id="sellerId"
+              name="sellerId"
+              type="text"
+              required
+              placeholder="Enter seller ID"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="houseAdd">Property Address</label>
+            <input
+              id="houseAdd"
+              name="houseAdd"
+              type="text"
+              required
+              placeholder="Enter full address"
+            />
+          </div>
+
+          {error && <div className="error-message">{error}</div>}
+
+          <button type="submit" className="submit-button">
+            Verify Information
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
 
-export default App;
-
-//branch test
+export default Seller;
