@@ -50,7 +50,8 @@ function Add() {
 
   return (
     <div className="App">
-      <div className="form-container">
+      <div className="login-form">
+        <h2>Add New Property</h2> 
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label htmlFor="address">Address</label>
