@@ -18,7 +18,6 @@ function App() {
   const handleConnectWallet = async () => {
     try {
       if (!window.ethereum) {
-        // Open MetaMask download page in new tab
         window.open('https://metamask.io/download/', '_blank');
         setError('MetaMask not installed - redirecting to download page');
         return;
