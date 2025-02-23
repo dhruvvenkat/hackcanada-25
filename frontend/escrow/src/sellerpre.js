@@ -7,7 +7,6 @@ function Sellerpre() {
   const navigate = useNavigate();
 
   return (
-    <div className="Dash">
       <div className="login-container">
         <div className="bg" style={{ flexDirection: 'column', gap: '20px' }}>
 				<h2>Seller Dashboard</h2>
@@ -26,7 +25,6 @@ function Sellerpre() {
           </button>
         </div>
       </div>
-    </div>
   );
 }
 

@@ -58,6 +58,8 @@ function App() {
 
   return (
     <div className="App">
+      
+      <img src={`${process.env.PUBLIC_URL}/Logo.png`} alt="Logo" />
       <h1>EscrowShield</h1>
 
       
