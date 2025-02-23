@@ -1,4 +1,4 @@
-# EscrowShield Web App
+# EscrowShield (HackCanada 2025)
 
 ## 🏠 Project Idea
 Our idea for the web app is to eliminate as much of the intermediary fees as possible when buying and selling houses by replacing traditional escrow services with a free web app. This initiative aims to benefit the Canadian real estate market by providing a cost-effective and transparent solution for both buyers and sellers.
