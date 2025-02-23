@@ -58,7 +58,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Real Estate Escrow Service</h1>
+      <h1>EscrowShield</h1>
 
       
       <Routes>
