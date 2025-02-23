@@ -13,11 +13,18 @@
     margin: 20px 0;
   }
   
+  .login-container1 {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    align-items: center;
+  }
+
   .login-container {
     display: flex;
     justify-content: space-around;
-    margin: 40px auto;
     max-width: 800px;
+    align-items: center;
   }
   
   .login-form {
@@ -26,6 +33,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 45%;
+    margin-top: -20rem;
   }
   
   label {
@@ -1172,4 +1180,10 @@ h1 {
   width: fit-content;
   margin-bottom: 2cm;
 
+}
+
+.form-container{
+  margin-top: -20rem;
+  border: #0097a7;
+  border-width: 0.1ch;
 }

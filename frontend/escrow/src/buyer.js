@@ -25,7 +25,7 @@ function Buyer() {
 
   return (
     <div className="App">
-      <div className="login-container">
+      <div className="login-container1">
         <div className="login-form">
           <h2>Enter the Information</h2>
           {/* Wrap inputs in a <form> so we can handle onSubmit properly */}
