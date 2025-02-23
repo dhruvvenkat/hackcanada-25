@@ -1,6 +1,6 @@
 # EscrowShield (HackCanada 2025)
 
-## 🏠 Project Idea
+## 🏠 Our Project
 EscrowShield is a solution designed to eliminate as many intermediary fees as possible when buying and selling property by replacing traditional escrow services with a free web app. This initiative aims to benefit the Canadian real estate market by providing a cost-effective and transparent solution for both buyers and sellers.
 
 Users can log into the app via their MetaMask account, which pulls down their public wallet addresses via the MetaMask API and our JavaScript code. The app has two main features: the buyer's page and the seller's pages. When listing a property, sellers are required to input the house address and postal code, after which they are provided with a key, which is used to securely facilitate the transaction. Additionally, both sellers and buyers must enter each other's public MetaMask addreses when completing a transaction, as well as the ID of the property (communicated by the seller to the buyer) and the terms that are required for the sale to go through, including:
