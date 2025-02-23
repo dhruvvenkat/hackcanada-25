@@ -20,7 +20,6 @@ function Seller() {
   };
 
   return (
-<<<<<<< HEAD
     <div className="seller-container">
       <div className="seller-card">
         <header className="seller-header">
@@ -30,7 +29,7 @@ function Seller() {
 
         <form className="seller-form" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="houseId">House ID</label>
+            <label htmlFor="houseId">Property ID</label>
             <input 
               id="houseId"
               name="houseId" 
@@ -52,7 +51,7 @@ function Seller() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="houseAdd">House Address</label>
+            <label htmlFor="houseAdd">Property Address</label>
             <input
               id="houseAdd"
               name="houseAdd"
@@ -69,25 +68,6 @@ function Seller() {
           </button>
         </form>
       </div>
-=======
-    <div className="App">
-        <div className="login-form">
-          <h2>Enter the Information</h2>
-          <form onSubmit={handleSubmit}>
-            <label>House ID</label>
-            <input name="houseId" required />
-            <label>User ID for Seller</label>
-            <input name="sellerId" required />
-            <label>House Address</label>
-            <input name="houseAdd" required />
-            <button type="submit">Enter</button>
-          </form>
-        </div>
-  
-
-          <p>Welcome, Seller</p>
-
->>>>>>> 8afbd243222f302dce5314189721b4078e832f17
     </div>
   );
 }
